@@ -1,6 +1,12 @@
 import torch
 
 class MultiLatentComposite:
+    NAME = "MultiLatentComposite"
+    CATEGORY = "Davemane42"
+    RETURN_TYPES = ("LATENT",)
+    RETURN_NAMES = ("Latent")
+    FUNCTION = "composite"
+
     @classmethod
     def INPUT_TYPES(s):
         return {
@@ -10,10 +16,6 @@ class MultiLatentComposite:
             },
             "hidden": {"extra_pnginfo": "EXTRA_PNGINFO", "unique_id": "UNIQUE_ID"},
         }
-    RETURN_TYPES = ("LATENT",)
-    FUNCTION = "composite"
-
-    CATEGORY = "Davemane42"
 
     def composite(self, samples_to, extra_pnginfo, unique_id, **kwargs):
 
